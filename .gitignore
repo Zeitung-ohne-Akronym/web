@@ -4,5 +4,3 @@ logs
 npm-debug.log*
 node_modules/
 .npm
-dist/bundle.js
-dist/bundle.css
