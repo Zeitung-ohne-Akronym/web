@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400,700,900&display=swap);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);.mdc-typography {
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400,700,900&display=swap);@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);.mdc-typography {
   font-family: Work Sans, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
@@ -982,3 +982,49 @@ body {
 
 .mdc-top-app-bar__title {
   font-weight: 900; }
+
+.container {
+  width: 100ch;
+  max-width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 32px 32px 32px; }
+  .container * {
+    font-family: Merriweather, 'Times New Roman', Times, serif; }
+
+.h1 {
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-weight: 900; }
+
+.h3 {
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-weight: 700; }
+
+.image {
+  border-radius: 4px; }
+
+.container > .card {
+  margin-left: -16px;
+  margin-right: -16px; }
+
+.card {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px; }
+  .card_split {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'left right';
+    gap: 16px; }
+  .card .card_left {
+    grid-area: left; }
+  .card .card_right {
+    grid-area: right; }
+  .card .card_header {
+    margin: 0 0 16px 0; }
+  .card .card_body {
+    margin: 0; }
+  .card .card_image {
+    width: 100%; }
