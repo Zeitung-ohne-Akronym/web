@@ -1,3 +1,15 @@
+@import 'material';
+
 * {
-    color: red !important
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.mdc-top-app-bar__logo svg {
+    height: 32px;
+    margin: 8px;
+    fill: $mdc-theme-on-primary;
 }

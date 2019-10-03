@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     entry: ['./src/javascript/index.js', './src/styles/index.scss'],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: 'bundle.js'
     },
     module: {
@@ -29,7 +29,15 @@ module.exports = {
                     },
                     { loader: 'extract-loader' },
                     { loader: 'css-loader' },
-                    { loader: 'sass-loader' },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                includePaths: [path.join(__dirname, 'node_modules'), path.join(__dirname, 'node_modules/@material/*')]
+                                    .reduce((a, c) => a.concat(c), [])
+                            }
+                        }
+                    },
                 ]
             }
         ]
@@ -39,5 +47,6 @@ module.exports = {
     // Depending on mode Webpack will apply different things
     // on final bundle. For now we don't need production's JavaScript 
     // minifying and other thing so let's set mode to development
-    mode: 'development'
+    mode: 'development',
+    devtool: 'source-map'
 };

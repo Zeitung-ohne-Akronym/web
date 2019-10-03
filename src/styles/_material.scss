@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+$mdc-typography-font-family: unquote("Work Sans, sans-serif");
+$mdc-shape-small-component-radius: 4px;
+$mdc-shape-medium-component-radius: 4px;
+$mdc-shape-large-component-radius: 0px;
+$mdc-theme-primary: #d31245;
+$mdc-theme-secondary: #12d3a0;
+$mdc-theme-surface: #ffffff;
+$mdc-theme-background: #ffffff;
+$mdc-theme-error: #ba3209;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #000000;
+$mdc-theme-on-error: #ffffff;
+$mdc-theme-on-surface: #000000;
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
