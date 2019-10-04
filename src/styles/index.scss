@@ -140,7 +140,7 @@ main {
         aside {
             display: block;
             width: 30ch;
-            transition: width 120ms ease-in;
+            transition: width 120ms ease-in-out, box-shadow 120ms ease-in-out;
             background-color: #ffffff;
             box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
         }
