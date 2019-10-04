@@ -29,20 +29,17 @@ body {
     padding: 0 32px 32px 32px;
 }
 
-main {
-    &,
-    & * {
-        font-family: Merriweather, 'Times New Roman', Times, serif;
-    }
-    text-align: justify;
-}
-
-.h1 {
+h1 {
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     font-weight: 900;
 }
 
-.h3 {
+h2 {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+h3 {
     font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
@@ -53,95 +50,100 @@ main {
 
 @import 'card';
 
-.zoa {
-    .container {
-        width: 140ch;
-        max-width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-    }
+.container {
+    width: 140ch;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
 
-    main {
+main {
+    padding: 16px 16px 16px 0;
+    width: 100ch;
+    max-width: 100%;
+    flex-grow: 1;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    text-align: justify;
+
+    &>section {
+        padding: 8px 0;
+    }
+}
+
+aside {
+    width: 30ch;
+    flex-shrink: 0;
+    z-index: 1000;
+    position: relative;
+    min-height: 100vh;
+
+    .menu {
         padding: 16px 16px 16px 0;
-        width: 100ch;
-        max-width: 100%;
-        flex-grow: 1;
+        position: sticky;
+        top: 0;
+
+        a.logo,
+        a.logo svg {
+            display: block;
+            height: calc(30ch - 16px);
+            transition: height 120ms ease-in-out;
+        }
+
+        a.logo svg {
+            margin: 0 auto;
+        }
+
+        .only_mobile {
+            display: none;
+        }
+
+        .mdc-list-item__graphic {
+            margin-right: 16px;
+        }
     }
 
-    aside {
-        width: 30ch;
-        flex-shrink: 0;
-        z-index: 1000;
-        position: relative;
-        min-height: 100vh;
-
-        .menu {
-            padding: 16px 16px 16px 0;
-            position: sticky;
-            top: 0;
+    @media screen and (max-width: 768px) {
+        & {
+            width: 56px;
 
             a.logo,
             a.logo svg {
-                display: block;
-                height: calc(30ch - 16px);
-                transition: height 120ms ease-in-out;
+                height: 48px !important;
             }
 
-            a.logo svg {
-                margin: 0 auto;
-            }
+            .menu {
+                padding: 8px 8px 8px 0;
 
-            .only_mobile {
-                display: none;
-            }
-
-            .mdc-list-item__graphic {
-                margin-right: 16px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            & {
-                width: 56px;
-
-                a.logo,
-                a.logo svg {
-                    height: 48px !important;
+                .only_mobile {
+                    display: flex;
                 }
 
-                .menu {
-                    padding: 8px 8px 8px 0;
-
-                    .only_mobile {
-                        display: flex;
-                    }
-
-                    .mdc-list-item {
-                        padding-left: 12px;
-                        padding-right: 12px;
-                    }
-                }
-            }
-        }
-
-        @media screen and (max-height: 492px) and (min-width: 769px) {
-            & {
-                a.logo,
-                a.logo svg {
-                    height: 64px !important;
+                .mdc-list-item {
+                    padding-left: 12px;
+                    padding-right: 12px;
                 }
             }
         }
     }
 
-    .rot {
-        background-color: $mdc-theme-primary;
-        color: $mdc-theme-on-primary;
+    @media screen and (max-height: 492px) and (min-width: 769px) {
+        & {
 
-        * {
-            fill: $mdc-theme-on-primary;
+            a.logo,
+            a.logo svg {
+                height: 64px !important;
+            }
         }
+    }
+}
+
+.rot {
+    background-color: $mdc-theme-primary;
+    color: $mdc-theme-on-primary;
+
+    * {
+        fill: $mdc-theme-on-primary;
     }
 }
 
