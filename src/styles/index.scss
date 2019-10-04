@@ -30,11 +30,11 @@ body {
 }
 
 main {
-
     &,
     & * {
         font-family: Merriweather, 'Times New Roman', Times, serif;
     }
+    text-align: justify;
 }
 
 .h1 {
@@ -66,6 +66,7 @@ main {
         padding: 16px 16px 16px 0;
         width: 100ch;
         max-width: 100%;
+        flex-grow: 1;
     }
 
     aside {
@@ -106,7 +107,7 @@ main {
 
                 a.logo,
                 a.logo svg {
-                    height: 48px;
+                    height: 48px !important;
                 }
 
                 .menu {
@@ -124,7 +125,7 @@ main {
             }
         }
 
-        @media screen and (max-height: 425px) {
+        @media screen and (max-height: 425px) and (min-width: 769px) {
             & {
                 a.logo,
                 a.logo svg {

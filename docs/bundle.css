@@ -1452,9 +1452,11 @@ body {
   margin: 0 auto;
   padding: 0 32px 32px 32px; }
 
-main,
-main * {
-  font-family: Merriweather, 'Times New Roman', Times, serif; }
+main {
+  text-align: justify; }
+  main,
+  main * {
+    font-family: Merriweather, 'Times New Roman', Times, serif; }
 
 .h1 {
   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
@@ -1503,7 +1505,8 @@ main * {
 .zoa main {
   padding: 16px 16px 16px 0;
   width: 100ch;
-  max-width: 100%; }
+  max-width: 100%;
+  flex-grow: 1; }
 
 .zoa aside {
   width: 30ch;
@@ -1531,7 +1534,7 @@ main * {
       width: 56px; }
       .zoa aside a.logo,
       .zoa aside a.logo svg {
-        height: 48px; }
+        height: 48px !important; }
       .zoa aside .menu {
         padding: 8px 8px 8px 0; }
         .zoa aside .menu .only_mobile {
@@ -1539,7 +1542,7 @@ main * {
         .zoa aside .menu .mdc-list-item {
           padding-left: 12px;
           padding-right: 12px; } }
-  @media screen and (max-height: 425px) {
+  @media screen and (max-height: 425px) and (min-width: 769px) {
     .zoa aside a.logo,
     .zoa aside a.logo svg {
       height: 64px !important; } }
