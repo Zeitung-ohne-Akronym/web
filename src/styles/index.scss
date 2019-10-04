@@ -73,6 +73,7 @@ main {
         flex-shrink: 0;
         z-index: 1000;
         position: relative;
+        min-height: 100vh;
 
         .menu {
             padding: 16px 16px 16px 0;
@@ -110,7 +111,6 @@ main {
 
                 .menu {
                     padding: 8px 8px 8px 0;
-                    height: 100vh;
 
                     .only_mobile {
                         display: flex;
@@ -139,6 +139,7 @@ main {
     html.sidebar-is-open {
         aside {
             display: block;
+            position: relative;
             width: 30ch;
             transition: width 120ms ease-in-out, box-shadow 120ms ease-in-out;
             background-color: #ffffff;

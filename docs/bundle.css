@@ -1510,7 +1510,7 @@ main * {
   flex-shrink: 0;
   z-index: 1000;
   position: relative;
-  transition: width 120ms ease-in; }
+  min-height: 100vh; }
   .zoa aside .menu {
     padding: 16px 16px 16px 0;
     position: sticky;
@@ -1531,8 +1531,7 @@ main * {
       .zoa aside a.logo svg {
         margin: 0 auto; }
       .zoa aside .menu {
-        padding: 8px 8px 8px 0;
-        height: 100vh; }
+        padding: 8px 8px 8px 0; }
         .zoa aside .menu .only_mobile {
           display: flex; }
         .zoa aside .menu .mdc-list-item {
@@ -1548,8 +1547,9 @@ main * {
 @media screen and (max-width: 768px) {
   html.sidebar-is-open aside {
     display: block;
+    position: relative;
     width: 30ch;
-    transition: width 120ms ease-in;
+    transition: width 120ms ease-in-out, box-shadow 120ms ease-in-out;
     background-color: #ffffff;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); }
   html.sidebar-is-open main {
@@ -1560,5 +1560,4 @@ main * {
     right: 0;
     top: 0;
     max-width: calc(100vw - 56px);
-    transition: position 120ms ease-in;
     overflow: hidden; } }
