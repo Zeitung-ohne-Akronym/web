@@ -73,6 +73,7 @@ main {
         flex-shrink: 0;
         z-index: 1000;
         position: relative;
+        transition: width 120ms ease-in;
 
         .menu {
             padding: 16px 16px 16px 0;
@@ -98,21 +99,14 @@ main {
             & {
                 width: 56px;
 
-                &.expanded {
-                    width: 30ch;
-                    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 
-                    .menu {
+                a.logo,
+                a.logo svg {
+                    height: 48px;
+                }
 
-                        a.logo,
-                        a.logo svg {
-                            height: 48px;
-                        }
-
-                        a.logo svg {
-                            margin: 0 auto;
-                        }
-                    }
+                a.logo svg {
+                    margin: 0 auto;
                 }
 
                 .menu {
@@ -147,20 +141,9 @@ main {
         aside {
             display: block;
             width: 30ch;
+            transition: width 120ms ease-in;
             background-color: #ffffff;
             box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-
-            .menu {
-
-                a.logo,
-                a.logo svg {
-                    height: 48px;
-                }
-
-                a.logo svg {
-                    margin: 0 auto;
-                }
-            }
         }
 
         main {
@@ -171,6 +154,7 @@ main {
             right: 0;
             top: 0;
             max-width: calc(100vw - 56px);
+            transition: position 120ms ease-in;
             overflow: hidden;
         }
     }

@@ -1509,7 +1509,8 @@ main * {
   width: 30ch;
   flex-shrink: 0;
   z-index: 1000;
-  position: relative; }
+  position: relative;
+  transition: width 120ms ease-in; }
   .zoa aside .menu {
     padding: 16px 16px 16px 0;
     position: sticky;
@@ -1524,14 +1525,11 @@ main * {
   @media screen and (max-width: 768px) {
     .zoa aside {
       width: 56px; }
-      .zoa aside.expanded {
-        width: 30ch;
-        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); }
-        .zoa aside.expanded .menu a.logo,
-        .zoa aside.expanded .menu a.logo svg {
-          height: 48px; }
-        .zoa aside.expanded .menu a.logo svg {
-          margin: 0 auto; }
+      .zoa aside a.logo,
+      .zoa aside a.logo svg {
+        height: 48px; }
+      .zoa aside a.logo svg {
+        margin: 0 auto; }
       .zoa aside .menu {
         padding: 8px 8px 8px 0;
         height: 100vh; }
@@ -1551,13 +1549,9 @@ main * {
   html.sidebar-is-open aside {
     display: block;
     width: 30ch;
+    transition: width 120ms ease-in;
     background-color: #ffffff;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); }
-    html.sidebar-is-open aside .menu a.logo,
-    html.sidebar-is-open aside .menu a.logo svg {
-      height: 48px; }
-    html.sidebar-is-open aside .menu a.logo svg {
-      margin: 0 auto; }
   html.sidebar-is-open main {
     position: fixed;
     /* prevents resizing from its original full-screen width */
@@ -1566,4 +1560,5 @@ main * {
     right: 0;
     top: 0;
     max-width: calc(100vw - 56px);
+    transition: position 120ms ease-in;
     overflow: hidden; } }
