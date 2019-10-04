@@ -1452,17 +1452,15 @@ body {
   margin: 0 auto;
   padding: 0 32px 32px 32px; }
 
-main {
-  text-align: justify; }
-  main,
-  main * {
-    font-family: Merriweather, 'Times New Roman', Times, serif; }
-
-.h1 {
+h1 {
   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   font-weight: 900; }
 
-.h3 {
+h2 {
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-weight: 700; }
+
+h3 {
   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   font-weight: 700; }
 
@@ -1495,62 +1493,68 @@ main {
   .card .card_image {
     width: 100%; }
 
-.zoa .container {
+.container {
   width: 140ch;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0; }
 
-.zoa main {
+main {
   padding: 16px 16px 16px 0;
   width: 100ch;
   max-width: 100%;
-  flex-grow: 1; }
+  flex-grow: 1;
+  font-family: Merriweather, 'Times New Roman', Times, serif;
+  text-align: justify; }
+  main > section {
+    padding: 8px 0; }
 
-.zoa aside {
+aside {
   width: 30ch;
   flex-shrink: 0;
   z-index: 1000;
   position: relative;
   min-height: 100vh; }
-  .zoa aside .menu {
+  aside .menu {
     padding: 16px 16px 16px 0;
     position: sticky;
     top: 0; }
-    .zoa aside .menu a.logo,
-    .zoa aside .menu a.logo svg {
+    aside .menu a.logo,
+    aside .menu a.logo svg {
       display: block;
       height: calc(30ch - 16px);
       transition: height 120ms ease-in-out; }
-    .zoa aside .menu a.logo svg {
+    aside .menu a.logo svg {
       margin: 0 auto; }
-    .zoa aside .menu .only_mobile {
+    aside .menu .only_mobile {
       display: none; }
-    .zoa aside .menu .mdc-list-item__graphic {
+    aside .menu .mdc-list-item__graphic {
       margin-right: 16px; }
-  @media screen and (max-width: 768px) {
-    .zoa aside {
-      width: 56px; }
-      .zoa aside a.logo,
-      .zoa aside a.logo svg {
-        height: 48px !important; }
-      .zoa aside .menu {
-        padding: 8px 8px 8px 0; }
-        .zoa aside .menu .only_mobile {
-          display: flex; }
-        .zoa aside .menu .mdc-list-item {
-          padding-left: 12px;
-          padding-right: 12px; } }
-  @media screen and (max-height: 492px) and (min-width: 769px) {
-    .zoa aside a.logo,
-    .zoa aside a.logo svg {
-      height: 64px !important; } }
 
-.zoa .rot {
+@media screen and (max-width: 768px) {
+  aside {
+    width: 56px; }
+    aside a.logo,
+    aside a.logo svg {
+      height: 48px !important; }
+    aside .menu {
+      padding: 8px 8px 8px 0; }
+      aside .menu .only_mobile {
+        display: flex; }
+      aside .menu .mdc-list-item {
+        padding-left: 12px;
+        padding-right: 12px; } }
+
+@media screen and (max-height: 492px) and (min-width: 769px) {
+  aside a.logo,
+  aside a.logo svg {
+    height: 64px !important; } }
+
+.rot {
   background-color: #d31245;
   color: #ffffff; }
-  .zoa .rot * {
+  .rot * {
     fill: #ffffff; }
 
 @media screen and (max-width: 768px) {
