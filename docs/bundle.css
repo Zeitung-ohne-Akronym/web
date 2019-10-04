@@ -1542,7 +1542,7 @@ main {
         .zoa aside .menu .mdc-list-item {
           padding-left: 12px;
           padding-right: 12px; } }
-  @media screen and (max-height: 425px) and (min-width: 769px) {
+  @media screen and (max-height: 492px) and (min-width: 769px) {
     .zoa aside a.logo,
     .zoa aside a.logo svg {
       height: 64px !important; } }
