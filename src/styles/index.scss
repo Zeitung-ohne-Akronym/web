@@ -73,7 +73,6 @@ main {
         flex-shrink: 0;
         z-index: 1000;
         position: relative;
-        transition: width 120ms ease-in;
 
         .menu {
             padding: 16px 16px 16px 0;
@@ -154,7 +153,6 @@ main {
             right: 0;
             top: 0;
             max-width: calc(100vw - 56px);
-            transition: position 120ms ease-in;
             overflow: hidden;
         }
     }
