@@ -1517,7 +1517,11 @@ main * {
     top: 0; }
     .zoa aside .menu a.logo,
     .zoa aside .menu a.logo svg {
-      display: block; }
+      display: block;
+      height: calc(30ch - 16px);
+      transition: height 120ms ease-in-out; }
+    .zoa aside .menu a.logo svg {
+      margin: 0 auto; }
     .zoa aside .menu .only_mobile {
       display: none; }
     .zoa aside .menu .mdc-list-item__graphic {
@@ -1528,8 +1532,6 @@ main * {
       .zoa aside a.logo,
       .zoa aside a.logo svg {
         height: 48px; }
-      .zoa aside a.logo svg {
-        margin: 0 auto; }
       .zoa aside .menu {
         padding: 8px 8px 8px 0; }
         .zoa aside .menu .only_mobile {
@@ -1537,6 +1539,10 @@ main * {
         .zoa aside .menu .mdc-list-item {
           padding-left: 12px;
           padding-right: 12px; } }
+  @media screen and (max-height: 425px) {
+    .zoa aside a.logo,
+    .zoa aside a.logo svg {
+      height: 64px !important; } }
 
 .zoa .rot {
   background-color: #d31245;

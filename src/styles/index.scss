@@ -83,6 +83,12 @@ main {
             a.logo,
             a.logo svg {
                 display: block;
+                height: calc(30ch - 16px);
+                transition: height 120ms ease-in-out;
+            }
+
+            a.logo svg {
+                margin: 0 auto;
             }
 
             .only_mobile {
@@ -95,18 +101,12 @@ main {
         }
 
         @media screen and (max-width: 768px) {
-
             & {
                 width: 56px;
-
 
                 a.logo,
                 a.logo svg {
                     height: 48px;
-                }
-
-                a.logo svg {
-                    margin: 0 auto;
                 }
 
                 .menu {
@@ -120,6 +120,15 @@ main {
                         padding-left: 12px;
                         padding-right: 12px;
                     }
+                }
+            }
+        }
+
+        @media screen and (max-height: 425px) {
+            & {
+                a.logo,
+                a.logo svg {
+                    height: 64px !important;
                 }
             }
         }
