@@ -25,23 +25,75 @@
     <link rel="stylesheet" href="bundle.css">
 </head>
 
-<body>
-    <header class=" mdc-top-app-bar mdc-top-app-bar--fixed">
-        <div class="mdc-top-app-bar__row">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button>
-                <a href="#" class="mdc-top-app-bar__logo" aria-label="ZOA Startseite">
-                    <svg version="1.1" viewBox="0 0 899.30688 658.125" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="m442.68 109-64.393 64.393v48.379l-47.824-47.824-123.13 123.13-23.305-9.7637 167.73-167.73h-245.93l-32.031 31.996-30.012 30.047 113.73 1.9531 119.2-1.9531-101.86 101.86-50.094-20.861-52.225 52.225 74.17 30.915-115.03 115.02 6.5723 6.5723 117.75-117.75 23.211 9.7178-108.15 108.15-71.061 71.061h268.98l63.969-63.992h-255.81l0.49609-0.49609 110.86-110.86 52.934 22.115 30.49-30.432c3.6842 24.667 11.699 48.933 24.234 71.549 45.652 82.363 139.32 121.54 226.86 94.893s146.31-112.23 142.35-207.29-69.638-174.99-159.07-193.61l-63.549 63.631zm245.23 10.588-62.045 62.043h160.44v163.96h-79.754v-163.96l-50.258 50.26c11.161 25.125 17.842 52.771 19.051 81.76 1.9267 46.212-10.27 90.286-33.037 127.09v217.39l64.244-64.275v-184.29h45.328l34.428-34.428-2e-3 163.41h10l2e-3 -173.41 19.49-19.49v201.85l63.5-63.5 0.01-302.36h-63.51v163.96h-19.49l-2e-3 -163.96h19.492l62.043-62.043zm-216.15 64.84c6.4681 0.24247 12.813 1.0246 19 2.3106v278.05c-6.1871 1.286-12.532 2.0681-19 2.3105zm-10 0.0625v282.55c-31.804-1.5655-60.557-16.22-82.049-39.262l62.969-62.969 0.0566-177.79c6.1902-1.366 12.545-2.22 19.023-2.5391zm39 4.8027c53.79 16.336 93.346 71.242 93.346 136.47 0 65.231-39.556 120.14-93.346 136.47zm-206.78 34.275c-16.111 30.616-24.414 64.855-24.439 99.357l-52.822-22.096zm84.303 1.6426 4e-3 201.03c-23.173-25.63-37.529-61.175-37.529-100.47 0-39.498 14.142-74.895 37.525-100.55z" />
-                    </svg>
-                </a>
-                <span class="mdc-top-app-bar__title">Zeitung ohne Akronym</span></section>
-        </div>
-    </header>
-    <main class="mdc-top-app-bar--fixed-adjust mdc-typography">
-        <h1 class="mdc-typography--headline1">Under Construction</h1>
-    </main>
+<body class="zoa">
+    <div class="container">
+        <aside>
+            <nav class="menu">
+                <div class="rot">
+                    <a href="#" class="logo" aria-label="ZOA Startseite">
+                        <svg version="1.1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m492.68 240.88-64.393 64.393v48.379l-47.824-47.824-123.13 123.13-23.305-9.7637 167.73-167.73h-245.93l-32.031 31.996-30.012 30.047 113.73 1.9531 119.2-1.9531-101.86 101.86-50.094-20.861-52.225 52.225 74.17 30.915-115.03 115.02 6.5723 6.5723 117.75-117.75 23.211 9.7178-108.15 108.15-71.061 71.061h268.98l63.969-63.992h-255.81l0.49609-0.49609 110.86-110.86 52.934 22.115 30.49-30.432c3.6842 24.667 11.699 48.933 24.234 71.549 45.652 82.363 139.32 121.54 226.86 94.893s146.31-112.23 142.35-207.29-69.638-174.99-159.07-193.61l-63.549 63.631zm245.23 10.588-62.045 62.043h160.44v163.96h-79.754v-163.96l-50.258 50.26c11.161 25.125 17.842 52.771 19.051 81.76 1.9267 46.212-10.27 90.286-33.037 127.09v217.39l64.244-64.275v-184.29h45.328l34.428-34.428-2e-3 163.41h10l2e-3 -173.41 19.49-19.49v201.85l63.5-63.5 0.01-302.36h-63.51v163.96h-19.49l-2e-3 -163.96h19.492l62.043-62.043zm-216.15 64.84c6.4681 0.24247 12.813 1.0246 19 2.3106v278.05c-6.1871 1.286-12.532 2.0681-19 2.3105zm-10 0.0625v282.55c-31.804-1.5655-60.557-16.22-82.049-39.262l62.969-62.969 0.0566-177.79c6.1902-1.366 12.545-2.22 19.023-2.5391zm39 4.8027c53.79 16.336 93.346 71.242 93.346 136.47 0 65.231-39.556 120.14-93.346 136.47zm-206.78 34.275c-16.111 30.616-24.414 64.855-24.439 99.357l-52.822-22.096zm84.303 1.6426 4e-3 201.03c-23.173-25.63-37.529-61.175-37.529-100.47 0-39.498 14.142-74.895 37.525-100.55z" />
+                        </svg>
+                    </a>
+                </div>
+                <nav class="mdc-list">
+                    <a href="#" id="menu-button" class="only_mobile mdc-list-item">
+                        <span class="mdc-list-item__graphic material-icons">menu</span>
+                    </a>
+                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                        <span class="mdc-list-item__graphic" aria-hidden="true">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path
+                                    d="M20,11H4V8H20M20,15H13V13H20M20,19H13V17H20M11,19H4V13H11M20.33,4.67L18.67,3L17,4.67L15.33,3L13.67,4.67L12,3L10.33,4.67L8.67,3L7,4.67L5.33,3L3.67,4.67L2,3V19A2,2 0 0,0 4,21H20A2,2 0 0,0 22,19V3L20.33,4.67Z" />
+                            </svg>
+                        </span>
+                        <span class="mdc-list-item__text">Aktuelles</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <span class="mdc-list-item__graphic" aria-hidden="true">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path
+                                    d="M11,13.5V21.5H3V13.5H11M9,15.5H5V19.5H9V15.5M12,2L17.5,11H6.5L12,2M12,5.86L10.08,9H13.92L12,5.86M17.5,13C20,13 22,15 22,17.5C22,20 20,22 17.5,22C15,22 13,20 13,17.5C13,15 15,13 17.5,13M17.5,15A2.5,2.5 0 0,0 15,17.5A2.5,2.5 0 0,0 17.5,20A2.5,2.5 0 0,0 20,17.5A2.5,2.5 0 0,0 17.5,15Z" />
+                            </svg>
+                        </span>
+                        <span class="mdc-list-item__text">Kreativ</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <span class="mdc-list-item__graphic" aria-hidden="true">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M15,15.6L13,14H4V10H13L15,8.4V15.6M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z" />
+                            </svg>
+                        </span>
+                        <span class="mdc-list-item__text">Mitteilungen</span>
+                    </a>
+                </nav>
+            </nav>
+        </aside>
+        <main>
+            <h1>Under Construction</h1>
+            Lita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            seddiam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+            doloreset ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet,
+            consetetur sa dipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diamvoluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor inviduntut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+            duo dolores et earebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet,
+            consetetur sadipscingelitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+            duo
+            dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr,
+            seddiam nonumy eirmod t
+        </main>
+    </div>
     <script src="bundle.js"></script>
 </body>
 
