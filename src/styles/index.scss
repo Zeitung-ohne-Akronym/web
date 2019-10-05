@@ -5,6 +5,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -147,7 +148,7 @@ aside {
         top: 0;
         width: calc(100vw - 56px);
         max-width: calc(100vw - 56px);
-        overflow: scroll;
+        overflow-y: auto;
     }
 }
 

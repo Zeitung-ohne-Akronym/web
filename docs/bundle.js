@@ -3089,6 +3089,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var menuButton = document.getElementById("menu-button");
 if (menuButton) menuButton.addEventListener("click", toggleSidebar);
+var main = document.getElementsByTagName("main")[0];
 
 function openSidebar() {
   document.documentElement.classList.add("sidebar-is-open");
@@ -3113,6 +3114,31 @@ window.addEventListener('resize', function () {
     closeSidebar();
   }
 });
+var mainNavLinks = document.querySelectorAll(".menu .mdc-list-item");
+var mainSections = document.querySelectorAll("main>section");
+var lastId;
+var cur = [];
+window.addEventListener("scroll", function (_) {
+  if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 768) selectNavLink(window.scrollY);
+});
+if (main) main.addEventListener("scroll", function (_) {
+  if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 769) selectNavLink(main.scrollTop);
+});
+
+function selectNavLink(scrollHeight) {
+  scrollHeight += 16;
+  mainNavLinks.forEach(function (link) {
+    if (link.hash) {
+      var section = document.querySelector(link.hash);
+
+      if (section.offsetTop <= scrollHeight && section.offsetTop + section.offsetHeight > scrollHeight) {
+        link.classList.add("mdc-list-item--activated");
+      } else {
+        link.classList.remove("mdc-list-item--activated");
+      }
+    }
+  });
+}
 
 /***/ }),
 

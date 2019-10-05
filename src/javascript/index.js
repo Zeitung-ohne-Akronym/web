@@ -1,6 +1,7 @@
 import './material.js'
 const menuButton = document.getElementById("menu-button");
 if (menuButton) menuButton.addEventListener("click", toggleSidebar);
+const main = document.getElementsByTagName("main")[0];
 
 function openSidebar() {
     document.documentElement.classList.add("sidebar-is-open");
@@ -20,3 +21,34 @@ window.addEventListener('resize', () => {
         closeSidebar();
     }
 });
+
+const mainNavLinks = document.querySelectorAll(".menu .mdc-list-item");
+const mainSections = document.querySelectorAll("main>section");
+
+let lastId;
+let cur = [];
+
+window.addEventListener("scroll", _ => {
+    if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 768) selectNavLink(window.scrollY);
+});
+
+if (main) main.addEventListener("scroll", _ => {
+    if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 769) selectNavLink(main.scrollTop);
+});
+
+function selectNavLink(scrollHeight) {
+    scrollHeight += 16;
+    mainNavLinks.forEach(link => {
+        if (link.hash) {
+            let section = document.querySelector(link.hash);
+            if (
+                section.offsetTop <= scrollHeight &&
+                section.offsetTop + section.offsetHeight > scrollHeight
+            ) {
+                link.classList.add("mdc-list-item--activated");
+            } else {
+                link.classList.remove("mdc-list-item--activated");
+            }
+        }
+    });
+}

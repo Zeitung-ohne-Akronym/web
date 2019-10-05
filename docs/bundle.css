@@ -1432,7 +1432,8 @@ a.mdc-list-item {
     padding-top: 56px; } }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 body {
   margin: 0; }
@@ -1561,7 +1562,7 @@ aside {
     top: 0;
     width: calc(100vw - 56px);
     max-width: calc(100vw - 56px);
-    overflow: scroll; } }
+    overflow-y: auto; } }
 
 @media screen and (max-height: 492px) and (min-width: 769px) {
   aside a.logo,
