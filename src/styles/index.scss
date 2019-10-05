@@ -126,6 +126,29 @@ aside {
             }
         }
     }
+
+    html.sidebar-is-open {
+        aside {
+            display: block;
+            position: relative;
+            width: 30ch;
+            transition: width 120ms ease-in-out, box-shadow 120ms ease-in-out;
+            background-color: #ffffff;
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+        }
+    }
+
+    main {
+        position: fixed;
+        /* prevents resizing from its original full-screen width */
+        bottom: 0;
+        left: 56px;
+        right: 0;
+        top: 0;
+        width: calc(100vw - 56px);
+        max-width: calc(100vw - 56px);
+        overflow: scroll;
+    }
 }
 
 @media screen and (max-height: 492px) and (min-width: 769px) {
@@ -144,29 +167,5 @@ aside {
 
     * {
         fill: $mdc-theme-on-primary;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    html.sidebar-is-open {
-        aside {
-            display: block;
-            position: relative;
-            width: 30ch;
-            transition: width 120ms ease-in-out, box-shadow 120ms ease-in-out;
-            background-color: #ffffff;
-            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-        }
-
-        main {
-            position: fixed;
-            /* prevents resizing from its original full-screen width */
-            bottom: 0;
-            left: 56px;
-            right: 0;
-            top: 0;
-            max-width: calc(100vw - 56px);
-            overflow: hidden;
-        }
     }
 }
