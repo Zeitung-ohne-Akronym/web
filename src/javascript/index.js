@@ -1,3 +1,4 @@
+import debounce from 'lodash.debounce';
 import './material.js'
 const menuButton = document.getElementById("menu-button");
 if (menuButton) menuButton.addEventListener("click", toggleSidebar);
@@ -28,13 +29,15 @@ const mainSections = document.querySelectorAll("main>section");
 let lastId;
 let cur = [];
 
-window.addEventListener("scroll", _ => {
+window.addEventListener("scroll", debounce(_ => {
+    console.log("scrolling window: " + window.scrollY);
     if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 768) selectNavLink(window.scrollY);
-});
+}, 200));
 
-if (main) main.addEventListener("scroll", _ => {
+if (main) main.addEventListener("scroll", debounce(_ => {
+    console.log("scrolling main: " + main.scrollTop);
     if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 769) selectNavLink(main.scrollTop);
-});
+}, 200));
 
 function selectNavLink(scrollHeight) {
     scrollHeight += 16;
